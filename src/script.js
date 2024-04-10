@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 });
+
 function addCar(newCar) {
     fetch('http://localhost:3001/cars', {
         method: 'POST',

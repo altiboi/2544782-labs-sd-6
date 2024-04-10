@@ -22,7 +22,10 @@ app.get('/api/cars', (req, res) => {
 app.get('/api/cars/:id', (req, res) => {
     const id = req.params.id;
     const car = cars.find(car => car.id === id);
-    if (!car) return res.status(404).json({ message: 'Car not found' });
+    if (!car){
+        console.log('kukhona inkinga')
+        return res.status(404).json({ message: 'Car not found' });
+    }
     res.json(car);
 });
 
